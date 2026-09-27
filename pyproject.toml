@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visionartificial"
+version = "0.1.0"
+description = "Sistema de vision artificial basado en YOLOv8 para deteccion, clasificacion y conteo automatico de frutas en supermercados."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+ml = [
+    "ultralytics>=8.2",
+    "opencv-python>=4.9",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+]
+roboflow = ["roboflow>=1.1"]
+analysis = ["statsmodels>=0.14", "scikit-learn>=1.4", "scipy>=1.12"]
+
+[tool.setuptools.packages.find]
+include = ["visionartificial*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

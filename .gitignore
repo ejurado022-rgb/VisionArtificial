@@ -1,0 +1,40 @@
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Build artifacts
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Configuracion local del entorno de desarrollo (especifica de esta maquina)
+.claude/
+
+# Pesos base que ultralytics descarga automaticamente al entrenar
+/yolov8n.pt
+*.pt
+
+# VisionArtificial: nunca commitear datasets ni pesos entrenados
+data/raw/*
+!data/raw/.gitkeep
+data/labeled/*
+!data/labeled/.gitkeep
+data/splits/*
+!data/splits/.gitkeep
+models/*.pt
+!models/.gitkeep
+
+# Salidas de inferencia/experimentos
+outputs/
+runs/
+*.csv
